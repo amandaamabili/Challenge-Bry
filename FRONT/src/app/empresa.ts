@@ -12,7 +12,6 @@ export class Empresa {
     public name: string,
     public cnpj: string,
     public endereco: string,
-    public funcionario: string
   ) {
   }
 }

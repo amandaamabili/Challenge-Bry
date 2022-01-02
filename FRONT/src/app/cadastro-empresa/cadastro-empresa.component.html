@@ -1,31 +1,45 @@
 <div class="container">
   <div [hidden]="submitted">
     <h1>Formulário de Cadastro</h1>
-    <form (ngSubmit)="onSubmit()" #heroForm="ngForm">
+    <form (ngSubmit)="onSubmit()" #empresaForm="ngForm">
       <div class="form-group">
         <label for="name">Nome</label>
-        <input type="text" class="form-control" id="name"
+        <input type="text" class="form-control" id="name" pattern="([aA-zZ]+)"
+               placeholder="Apenas letras Ex: Bry"
                required
                [(ngModel)]="model.name" name="name"
                #name="ngModel">
         <div [hidden]="name.valid || name.pristine"
              class="alert alert-danger">
-          Nome é Obrigatório!
+          Nome é Obrigatório sem caracteres especiais!
         </div>
       </div>
 
       <div class="form-group">
         <label for="cnpj"> CNPJ</label>
-        <input type="text" class="form-control" id="cnpj"
-               [(ngModel)]="model.cnpj" name="CNPJ">
+        <input type="text" class="form-control" id="cnpj" placeholder="Digite aqui o seu CNPJ Ex: 02583524"
+               required
+               [(ngModel)]="model.cnpj" name="CNPJ"
+               #cnpj='ngModel'>
+        <div [hidden]="cnpj.valid || cnpj.pristine"
+             class="alert alert-danger">
+          CNPJ é Obrigatório!
+        </div>
       </div>
       <div class="form-group">
         <label for="endereco"> Endereço</label>
         <input type="text" class="form-control" id="endereco"
-               [(ngModel)]="model.endereco" name="endereco">
+               placeholder="Seu Endereço Ex: Travessa Rodoaldo"
+               required
+               [(ngModel)]="model.endereco" name="endereco"
+               #endereco='ngModel'>
+        <div [hidden]="endereco.valid || endereco.pristine"
+             class="alert alert-danger">
+          Endereço é Obrigatório!
+        </div>
       </div>
 
-      <div class="form-group">
+      <!--<div class="form-group">
         <label for="funcionario">Funcionários</label>
         <select class="form-control" id="funcionario"
                 required
@@ -37,9 +51,10 @@
          Funcionário é obrigatório
         </div>
       </div>
+      -->
 
-      <button type="submit" class="btn btn-success" [disabled]="!heroForm.form.valid">Submit</button>
-      <button type="button" class="btn btn-default" (click)="newEmpresa(); heroForm.reset()">Nova Empresa</button>
+      <button type="submit" class="btn btn-success" [disabled]="!empresaForm.form.valid">Submit</button>
+      <button type="button" class="btn btn-default" (click)="newEmpresa(); empresaForm.reset()">Nova Empresa</button>
     </form>
   </div>
 
@@ -54,12 +69,8 @@
       <div class="col-xs-9">{{ model.cnpj }}</div>
     </div>
     <div class="row">
-      <div class="col-xs-3">Endereço </div>
+      <div class="col-xs-3">Endereço</div>
       <div class="col-xs-9">{{ model.endereco }}</div>
-    </div>
-    <div class="row">
-      <div class="col-xs-3">Funcionários</div>
-      <div class="col-xs-9">{{ model.funcionario }}</div>
     </div>
     <br>
     <button class="btn btn-primary" (click)="submitted=false">Edit</button>

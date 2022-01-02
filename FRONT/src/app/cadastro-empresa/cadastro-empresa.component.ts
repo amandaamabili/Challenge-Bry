@@ -8,15 +8,15 @@ import {Empresa} from "../empresa";
 
 })
 export class CadastroEmpresaComponent  {
-  funcionarios = ['Amanda', 'Katz',
-    'Rossini', 'Manuel'];
+  //funcionarios = ['Amanda', 'Katz',
+   // 'Rossini', 'Manuel'];
 
-  model = new Empresa(18, 'Bras', '056898','Travessa Andante' ,this.funcionarios[0], );
+  model = new Empresa(18, '', '','' ); //,this.funcionarios[0], );
 
   submitted = false;
   onSubmit() { this.submitted = true; }
   newEmpresa() {
-    this.model = new Empresa(42, '', '','','');
+    this.model = new Empresa(42, '', '','');
   }
 }
 

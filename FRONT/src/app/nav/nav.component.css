@@ -1,0 +1,22 @@
+.header-content{
+  background-color: var(--header);
+  color: var(--border-green);
+  padding: 0.5rem 3rem 0.5rem 3rem;
+
+}
+
+button{
+  color: var(--border-green);
+}
+button:hover{
+  color: var(--block) !important;
+  filter: brightness(70%) !important;
+
+}
+
+a:hover{
+  color: var(--block);
+  filter: brightness(70%);
+  background-color: RGBA(1, 53, 44,0.5);
+
+}

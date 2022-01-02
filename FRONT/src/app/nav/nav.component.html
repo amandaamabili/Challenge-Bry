@@ -1,0 +1,52 @@
+<header>
+  <div class="header-content d-flex justify-content-lg-between align-items-center">
+    <div>
+      <h1>teste</h1>
+    </div>
+
+    <div class="header-content d-flex justify-content-evenly ">
+
+      <div ngbDropdown class="dropdown">
+        <button ngbDropdownToggle class="btn" type="button" id="dropdownMenuButton1" aria-expanded="false">
+          Empresas
+        </button>
+        <ul ngbDropdownMenu aria-labelledby="dropdownMenuButton1" style="background-color: var(--header)!important;">
+          <li routerLinkActive="active"><a routerLink="/listagemEmpresa" ngbDropdownItem href="#"
+                                           style="color: var(--border-green)!important;">Listagem</a></li>
+          <li routerLinkActive="active"><a routerLink="/cadastroEmpresas" ngbDropdownItem href="#"
+                                           style="color: var(--border-green)!important;">cadastro Empresas </a></li>
+
+        </ul>
+      </div>
+      <div ngbDropdown class="dropdown">
+        <button ngbDropdownToggle class="btn" type="button" id="dropdownMenuButton1" aria-expanded="false">
+          Funcionários
+        </button>
+        <ul ngbDropdownMenu aria-labelledby="dropdownMenuButton1"
+            style="background-color: var(--header)!important;"
+        >
+          <li routerLinkActive="active"><a routerLink="/listagemFuncionarios" ngbDropdownItem href="#"
+                                           style="color: var(--border-green)!important;">Listagem</a></li>
+          <li routerLinkActive="active"><a routerLink="/cadastroFuncionarios" ngbDropdownItem href="#"
+                                           style="color: var(--border-green)!important;">cadastro Funcionários </a></li>
+
+        </ul>
+      </div>
+
+
+    </div>
+
+
+    <div class="dados d-flex flex-row  justify-content-end ">
+      <button type="button" class="btn btn-outline-success">Login</button>
+
+
+    </div>
+
+  </div>
+  <router-outlet></router-outlet>
+
+
+</header>
+
+

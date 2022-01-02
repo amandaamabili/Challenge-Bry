@@ -1,0 +1,16 @@
+<div *ngIf="empresa">
+  <h2>{{empresa.name | uppercase}} Detalhes</h2>
+  <div><span>id: </span>{{empresa.id}}</div>
+  <div><span>Nome: </span>{{empresa.name}}</div>
+  <div><span>CNPJ: </span>{{empresa.cnpj}}</div>
+  <div><span>Endereço: </span>{{empresa.endereco}}</div>
+  <div><span>Funcionário: </span>{{empresa.funcionario}}</div>
+  <!--
+  <div>
+    <label for="hero-name">Hero name: </label>
+    <input id="hero-name" [(ngModel)]="empresa.name" placeholder="Empresa "/>
+  </div>
+  -->
+
+  <button (click)="goBack()">Voltar</button>
+</div>

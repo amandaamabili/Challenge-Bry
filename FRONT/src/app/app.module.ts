@@ -11,7 +11,7 @@ import { ListagemEmpresaComponent } from './listagem-empresa/listagem-empresa.co
 import { ListagemFuncionariosComponent } from './listagem-funcionarios/listagem-funcionarios.component';
 import { EmpresaDetalheComponent } from './empresa-detalhe/empresa-detalhe.component';
 import {FormsModule} from "@angular/forms";
-//import { ReactiveFormsModule } from '@angular/forms';
+
 
 
 @NgModule({
@@ -23,7 +23,7 @@ import {FormsModule} from "@angular/forms";
     ListagemEmpresaComponent,
     ListagemFuncionariosComponent,
     EmpresaDetalheComponent,
-    //ReactiveFormsModule
+
 
   ],
     imports: [

@@ -1,4 +1,5 @@
 import {Component, OnInit} from '@angular/core';
+import {Empresa} from "../empresa";
 
 @Component({
   selector: 'app-cadastro-empresa',
@@ -6,12 +7,16 @@ import {Component, OnInit} from '@angular/core';
   styleUrls: ['./cadastro-empresa.component.css']
 
 })
-export class CadastroEmpresaComponent implements OnInit {
+export class CadastroEmpresaComponent  {
+  funcionarios = ['Amanda', 'Katz',
+    'Rossini', 'Manuel'];
 
-  constructor() {
+  model = new Empresa(18, 'Bras', '056898','Travessa Andante' ,this.funcionarios[0], );
+
+  submitted = false;
+  onSubmit() { this.submitted = true; }
+  newEmpresa() {
+    this.model = new Empresa(42, '', '','','');
   }
-
-  ngOnInit(): void {
-  }
-
 }
+

@@ -5,3 +5,14 @@ export interface Empresa {
   endereco: string;
   funcionario: string;
 }
+
+export class Empresa {
+  constructor(
+    public id: number,
+    public name: string,
+    public cnpj: string,
+    public endereco: string,
+    public funcionario: string
+  ) {
+  }
+}

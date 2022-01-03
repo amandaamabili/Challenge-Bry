@@ -3,25 +3,34 @@
 
   <a href="#" routerLink="/listagemEmpresa" class="btn btn-success">Voltar</a>
 
-  <div>
-    <h1>Visualizar Empresa</h1>
+
+
+  <div class="container-dados">
+    <div>
+
+
+      <h2>Dados da Empresa</h2>
+    </div>
+<div >
+  <div class="dados">
+    <p class="text">Id: </p>
+    <p>{{ empresa.id }}</p>
   </div>
 
-  <div>
-
-    <p>ID: {{ empresa.id }}</p>
+  <div class="dados">
+    <p class="text" >Empresa: </p>
+    <p> {{ empresa.nome }}</p>
   </div>
 
-  <div>
-    <p>Nome da empresa: {{ empresa.nome }}</p>
+  <div class="dados">
+    <p class="text">CNPJ: </p>
+    <p> {{ empresa.cnpj }}</p>
   </div>
 
-  <div>
-    <p> CNPJ: {{ empresa.cnpj }}</p>
+  <div class="dados">
+    <p class="text">Endereço: </p>
+    <p> {{ empresa.endereco }}</p>
   </div>
-
-  <div>
-    <p>Endereço: {{ empresa.endereco }}</p>
+</div>
   </div>
-
 </div>

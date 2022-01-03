@@ -28,5 +28,5 @@ table th{
 .deletar{
   background-color: var(--danger);
   color: var(--text-title);
-  margin-left: 9rem;
+  margin-left: 0.2rem;
 }

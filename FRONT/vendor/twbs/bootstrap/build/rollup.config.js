@@ -51,7 +51,7 @@ const rollupConfig = {
 }
 
 if (!ESM) {
-  rollupConfig.output.name = 'bootstrap'
+  rollupConfig.output.nome = 'bootstrap'
 }
 
 module.exports = rollupConfig

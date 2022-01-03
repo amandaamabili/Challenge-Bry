@@ -1,26 +1,27 @@
 <div class="container">
-  <h1>View Empresa</h1>
 
-  <a href="#" routerLink="/listagemEmpresa" class="btn btn-primary">Back</a>
+
+  <a href="#" routerLink="/listagemEmpresa" class="btn btn-success">Voltar</a>
 
   <div>
-    <strong>ID:</strong>
-    <p>{{ empresa.id }}</p>
+    <h1>Visualizar Empresa</h1>
   </div>
 
   <div>
-    <strong>Nome:</strong>
-    <p>{{ empresa.name }}</p>
+
+    <p>ID: {{ empresa.id }}</p>
   </div>
 
   <div>
-    <strong>CNPJ:</strong>
-    <p>{{ empresa.cnpj }}</p>
+    <p>Nome da empresa: {{ empresa.nome }}</p>
   </div>
 
   <div>
-    <strong>Endereço:</strong>
-    <p>{{ empresa.endereco }}</p>
+    <p> CNPJ: {{ empresa.cnpj }}</p>
+  </div>
+
+  <div>
+    <p>Endereço: {{ empresa.endereco }}</p>
   </div>
 
 </div>

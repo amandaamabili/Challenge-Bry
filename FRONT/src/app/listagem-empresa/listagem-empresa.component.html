@@ -2,23 +2,21 @@
 
   <a href="#" routerLink="/cadastroEmpresa" class="btn btn-success">Cadastrar nova empresa</a>
 
-  <table class="table table-bordered">
+  <table class="table ">
     <tr>
-      <th>ID</th>
-      <th>Empresa</th>
-      <th>CNPJ</th>
-      <th>Endereço</th>
-      <th >Action</th>
+      <th scope="col">Empresa</th>
+      <th scope="col">CNPJ</th>
+      <th scope="col">Endereço</th>
+      <th scope="col">Ações</th>
     </tr>
-    <tr *ngFor="let empresa of empresas">
-      <td>{{ empresa.id }}</td>
-      <td>{{ empresa.name }}</td>
+    <tr scope="row" *ngFor="let empresa of empresas">
+      <td>{{ empresa.nome }}</td>
       <td>{{ empresa.cnpj }}</td>
       <td>{{ empresa.endereco }}</td>
-      <td>
-        <a href="#" [routerLink]="['/detail/', empresa.id]" class="btn btn-info">View</a>
-        <a href="#" [routerLink]="['/editar/', empresa.id]" class="btn btn-primary">Edit</a>
-        <button type="button" (click)="deleteEmpresa(empresa.id)" class="btn btn-danger">Delete</button>
+      <td class="table-info" >
+        <a href="#" [routerLink]="['/detail/', empresa.id]" class="btn visu">Visualizar Dados</a>
+        <a href="#" [routerLink]="['/editar/', empresa.id]" class="btn edit">Editar Dados</a>
+        <button type="button" (click)="deleteEmpresa(empresa.id)" class="btn deletar">Deletar</button>
       </td>
     </tr>
   </table>

@@ -11,7 +11,7 @@
         formControlName="nome"
         id="nome"
         type="text"
-        [(ngModel)]="empresa.name"
+        [(ngModel)]="empresa.nome"
         class="form-control">
       <div *ngIf="f['nome'].touched && f['nome'].invalid" class="alert alert-danger">
         <div *ngIf="f['nome'].errors && f['nome'].errors['required']">Name is required.</div>

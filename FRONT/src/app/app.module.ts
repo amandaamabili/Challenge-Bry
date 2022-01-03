@@ -12,10 +12,10 @@ import { HttpClientModule } from '@angular/common/http';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 
 
-import { InMemoryDataService } from './in-memory-data.service';
-import { MessagesComponent } from './messages/messages.component';
 
-import {EmpresaModule} from '../app/empresa/empresa.module'
+import {EmpresaModule} from '../app/empresa/empresa.module';
+import { EditarFuncionariosComponent } from './editar-funcionarios/editar-funcionarios.component';
+import { DetalheFuncionariosComponent } from './detalhe-funcionarios/detalhe-funcionarios.component'
 
 @NgModule({
   declarations: [
@@ -23,7 +23,9 @@ import {EmpresaModule} from '../app/empresa/empresa.module'
     NavComponent,
     CadastroFuncionariosComponent,
     ListagemFuncionariosComponent,
-    MessagesComponent,
+    EditarFuncionariosComponent,
+    DetalheFuncionariosComponent,
+
 
 
 

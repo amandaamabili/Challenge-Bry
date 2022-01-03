@@ -51,22 +51,6 @@ export class EmpresaService {
   }
 
 
-/*  update(id: number, nome: string, cnpj: string, endereco: string) {
-    const url = this.empresaUrl + '/' + id;
-    const httpOptions = { headers: this.httpOptions };
-    const response = this.http.put<Empresa[]>(
-      url,
-      { id, nome, cnpj, endereco }
-    );
-    return response;
-  }*/
-
-
- /* update(id: number, empresa: Empresa): Observable<Empresa> {
-    return this.http.put<Empresa>(`${this.empresaUrl}/${id}`, JSON.stringify(empresa), this.httpOptions).pipe(
-      catchError(this.handleError<any>('updateEmpresa'))
-    );*/
-
 update(id: number, params: any){
   return this.http.put(`${this.empresaUrl}/${id}`, params).pipe(
     catchError(this.handleError<any>('updateEmpresa'))

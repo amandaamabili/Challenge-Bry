@@ -7,6 +7,8 @@ import {ListagemFuncionariosComponent} from "./listagem-funcionarios/listagem-fu
 import {EmpresaDetalheComponent} from "./empresa-detalhe/empresa-detalhe.component"
 import {RouterModule, Routes} from "@angular/router";
 import {EditarEmpresaComponent} from "./editar-empresa/editar-empresa.component";
+import {EditarFuncionariosComponent} from "./editar-funcionarios/editar-funcionarios.component"
+import {DetalheFuncionariosComponent} from "./detalhe-funcionarios/detalhe-funcionarios.component"
 
  const  appRoutes: Routes = [
   // {path:'', redirectTo: '/cadastroEmpresas', pathMatch: 'full'},
@@ -15,7 +17,10 @@ import {EditarEmpresaComponent} from "./editar-empresa/editar-empresa.component"
    {path: 'listagemEmpresa', component: ListagemEmpresaComponent},
    {path: 'listagemFuncionarios', component: ListagemFuncionariosComponent},
    {path: 'detail/:id', component: EmpresaDetalheComponent},
-   {path: 'editar/:id', component: EditarEmpresaComponent}
+   {path: 'editar/:id', component: EditarEmpresaComponent},
+   {path: 'detalhefuncionario/:id', component: DetalheFuncionariosComponent},
+   {path: 'editarfuncionario/:id', component: EditarFuncionariosComponent},
+
  ]
 @NgModule({
   declarations: [],

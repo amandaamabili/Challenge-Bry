@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {ActivatedRoute} from '@angular/router';
+import {ActivatedRoute, Router} from '@angular/router';
 import {Location} from '@angular/common';
 import {Empresa} from '../empresa'
 import {EmpresaService} from '../empresa.service'
@@ -10,26 +10,25 @@ import {EmpresaService} from '../empresa.service'
   styleUrls: ['./empresa-detalhe.component.css']
 })
 export class EmpresaDetalheComponent implements OnInit {
-  empresa: Empresa | undefined;
+  id!: number;
+  empresa!: Empresa;
 
   constructor(
     private route: ActivatedRoute,
     private empresaService: EmpresaService,
-    private location: Location
+    private router: Router
   ) {
   }
 
   ngOnInit(): void {
-    this.getEmpresa();
+    this.id = this.route.snapshot.params['id'];
+    this.empresaService.find(this.id).subscribe((response: any)=>{
+      this.empresa = response.data;
+    });
   }
 
-  getEmpresa(): void {
-    const id = Number(this.route.snapshot.paramMap.get('id'));
-    this.empresaService.getEmpresa(id)
-      .subscribe(empresa => this.empresa = empresa);
-  }
 
-  goBack(): void {
-    this.location.back();
-  }
+
+
+
 }

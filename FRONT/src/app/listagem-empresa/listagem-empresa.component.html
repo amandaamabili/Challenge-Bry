@@ -1,9 +1,25 @@
-<h2>Empresas</h2>
-<ul class="empresas">
-  <li *ngFor="let empresa of empresas">
-    <a routerLink="/detail/{{empresa.id}}">
-      <span class="badge">{{empresa.id}}</span> {{empresa.name}}
-    </a>
-  </li>
-</ul>
+<div class="container">
 
+  <a href="#" routerLink="/cadastroEmpresa" class="btn btn-success">Cadastrar nova empresa</a>
+
+  <table class="table table-bordered">
+    <tr>
+      <th>ID</th>
+      <th>Empresa</th>
+      <th>CNPJ</th>
+      <th>Endereço</th>
+      <th >Action</th>
+    </tr>
+    <tr *ngFor="let empresa of empresas">
+      <td>{{ empresa.id }}</td>
+      <td>{{ empresa.name }}</td>
+      <td>{{ empresa.cnpj }}</td>
+      <td>{{ empresa.endereco }}</td>
+      <td>
+        <a href="#" [routerLink]="['/detail/', empresa.id]" class="btn btn-info">View</a>
+        <a href="#" [routerLink]="['/editar/', empresa.id]" class="btn btn-primary">Edit</a>
+        <button type="button" (click)="deleteEmpresa(empresa.id)" class="btn btn-danger">Delete</button>
+      </td>
+    </tr>
+  </table>
+</div>

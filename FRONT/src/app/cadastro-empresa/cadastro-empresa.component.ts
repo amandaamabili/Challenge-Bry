@@ -1,5 +1,8 @@
 import {Component, OnInit} from '@angular/core';
 import {Empresa} from "../empresa";
+import {EmpresaService} from "../empresa.service";
+import {Router} from "@angular/router";
+import {FormControl, FormGroup, Validators} from "@angular/forms";
 
 @Component({
   selector: 'app-cadastro-empresa',
@@ -7,16 +10,33 @@ import {Empresa} from "../empresa";
   styleUrls: ['./cadastro-empresa.component.css']
 
 })
-export class CadastroEmpresaComponent  {
-  //funcionarios = ['Amanda', 'Katz',
-   // 'Rossini', 'Manuel'];
+export class CadastroEmpresaComponent implements OnInit {
+  form!: FormGroup;
 
-  model = new Empresa(18, '', '','' ); //,this.funcionarios[0], );
+constructor(public empresaService: EmpresaService, private router: Router) { }
+  ngOnInit(): void {
+    this.form = new FormGroup({
+      nome: new FormControl('', [Validators.required, Validators.pattern('^[a-zA-Z]+')]),
+      cnpj: new FormControl('', Validators.required),
+      endereco: new FormControl('', Validators.required),
 
-  submitted = false;
-  onSubmit() { this.submitted = true; }
-  newEmpresa() {
-    this.model = new Empresa(42, '', '','');
+    });
   }
+  get f(){
+    return this.form.controls;
+  }
+
+
+  submit(){
+    console.log(this.form.value);
+    this.empresaService.create(this.form.value).subscribe((res:any) => {
+      console.log('Post created successfully!');
+      this.router.navigateByUrl('/listagemEmpresa');
+    })
+  }
+
+
+
+
 }
 

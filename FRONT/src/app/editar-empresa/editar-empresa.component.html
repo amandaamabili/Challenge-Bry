@@ -1,6 +1,5 @@
-
 <div class="container">
-  <h1>Create New Empresa</h1>
+  <h1>EDitar Empresa</h1>
 
   <a href="#" routerLink="/listagemEmpresa" class="btn btn-primary">Back</a>
 
@@ -12,9 +11,10 @@
         formControlName="nome"
         id="nome"
         type="text"
+        [(ngModel)]="empresa.name"
         class="form-control">
       <div *ngIf="f['nome'].touched && f['nome'].invalid" class="alert alert-danger">
-        <div *ngIf="f['nome'].errors && f['nome'].errors['required']">name is required.</div>
+        <div *ngIf="f['nome'].errors && f['nome'].errors['required']">Name is required.</div>
       </div>
     </div>
 
@@ -24,6 +24,7 @@
         formControlName="cnpj"
         id="cnpj"
         type="text"
+        [(ngModel)]="empresa.cnpj"
         class="form-control">
             </textarea>
       <div *ngIf="f['cnpj'].touched && f['cnpj'].invalid" class="alert alert-danger">
@@ -37,17 +38,13 @@
         formControlName="endereco"
         id="endereco"
         type="text"
+        [(ngModel)]="empresa.endereco"
         class="form-control">
             </textarea>
       <div *ngIf="f['endereco'].touched && f['endereco'].invalid" class="alert alert-danger">
-        <div *ngIf="f['endereco'].errors && f['endereco'].errors['required']">adress is required.</div>
+        <div *ngIf="f['endereco'].errors && f['endereco'].errors['required']">Endereço is required.</div>
       </div>
     </div>
-
-    <button class="btn btn-primary" type="submit" [disabled]="!form.valid">Submit</button>
+    <button class="btn btn-primary" type="submit" [disabled]="!form.valid">Atualizar</button>
   </form>
 </div>
-
-
-
-

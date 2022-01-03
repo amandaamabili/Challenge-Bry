@@ -1,12 +1,12 @@
 export interface Empresa {
   id: number;
-  name: string;
+ name: string;
   cnpj: string;
   endereco: string;
-  funcionario: string;
+  //funcionario: string;
 }
 
-export class Empresa {
+/*export class Empresa {
   constructor(
     public id: number,
     public name: string,
@@ -14,4 +14,4 @@ export class Empresa {
     public endereco: string,
   ) {
   }
-}
+}*/

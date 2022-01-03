@@ -1,16 +1,26 @@
-<div *ngIf="empresa">
-  <h2>{{empresa.name | uppercase}} Detalhes</h2>
-  <div><span>id: </span>{{empresa.id}}</div>
-  <div><span>Nome: </span>{{empresa.name}}</div>
-  <div><span>CNPJ: </span>{{empresa.cnpj}}</div>
-  <div><span>Endereço: </span>{{empresa.endereco}}</div>
-  <div><span>Funcionário: </span>{{empresa.funcionario}}</div>
-  <!--
-  <div>
-    <label for="hero-name">Hero name: </label>
-    <input id="hero-name" [(ngModel)]="empresa.name" placeholder="Empresa "/>
-  </div>
-  -->
+<div class="container">
+  <h1>View Empresa</h1>
 
-  <button (click)="goBack()">Voltar</button>
+  <a href="#" routerLink="/listagemEmpresa" class="btn btn-primary">Back</a>
+
+  <div>
+    <strong>ID:</strong>
+    <p>{{ empresa.id }}</p>
+  </div>
+
+  <div>
+    <strong>Nome:</strong>
+    <p>{{ empresa.name }}</p>
+  </div>
+
+  <div>
+    <strong>CNPJ:</strong>
+    <p>{{ empresa.cnpj }}</p>
+  </div>
+
+  <div>
+    <strong>Endereço:</strong>
+    <p>{{ empresa.endereco }}</p>
+  </div>
+
 </div>

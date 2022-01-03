@@ -6,14 +6,16 @@ import {ListagemEmpresaComponent} from  "./listagem-empresa/listagem-empresa.com
 import {ListagemFuncionariosComponent} from "./listagem-funcionarios/listagem-funcionarios.component"
 import {EmpresaDetalheComponent} from "./empresa-detalhe/empresa-detalhe.component"
 import {RouterModule, Routes} from "@angular/router";
+import {EditarEmpresaComponent} from "./editar-empresa/editar-empresa.component";
 
  const  appRoutes: Routes = [
   // {path:'', redirectTo: '/cadastroEmpresas', pathMatch: 'full'},
-   {path: 'cadastroEmpresas', component: CadastroEmpresaComponent},
+   {path: 'cadastroEmpresa', component: CadastroEmpresaComponent},
    {path: 'cadastroFuncionarios', component: CadastroFuncionariosComponent},
    {path: 'listagemEmpresa', component: ListagemEmpresaComponent},
    {path: 'listagemFuncionarios', component: ListagemFuncionariosComponent},
-   {path: 'detail/:id', component: EmpresaDetalheComponent}
+   {path: 'detail/:id', component: EmpresaDetalheComponent},
+   {path: 'editar/:id', component: EditarEmpresaComponent}
  ]
 @NgModule({
   declarations: [],

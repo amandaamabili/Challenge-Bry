@@ -28,8 +28,9 @@ export class EditarEmpresaComponent implements OnInit {
     this.id = this.route.snapshot.params['id'];
     this.isAddMode = !this.id;
 
-    this.empresaService.find(this.id).subscribe((data: Empresa)=>{
-      this.empresa = data;
+    this.empresaService.find(this.id).subscribe((response: any)=>{
+      console.log(response)
+      this.empresa = response.data;
     });
 
     this.form = new FormGroup({

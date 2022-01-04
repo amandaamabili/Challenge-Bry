@@ -6,6 +6,7 @@ export interface Funcionarios {
   email: string;
   endereco: string;
   senha: string;
-  empresa: string | [];
+  empresa: string;
+
 
 }

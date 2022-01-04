@@ -38,7 +38,7 @@ class FuncionariosController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
-    {   info("assaassasas");
+    {
         $funcionarios = new Funcionarios;
         $funcionarios->login = $request ->input('login');
         $funcionarios->nome = $request ->input('nome');
@@ -50,7 +50,7 @@ class FuncionariosController extends Controller
         if($funcionarios -> save()){
             $relaciotionship = new IntegracaoFuncionarioEmpresa;
             $relaciotionship -> id_empresas = $request ->input('empresa');
-            $relaciotionship -> id_funcionarios = $funcionarios -> input('id');
+            $relaciotionship -> id_funcionarios = $funcionarios -> id;
             echo $relaciotionship;
             $relaciotionship -> save();
             return new  FuncionariosResource($funcionarios);
@@ -90,6 +90,10 @@ class FuncionariosController extends Controller
     public function update(Request $request)
     {
         $funcionarios = Funcionarios::findOrFail($request->id);
+
+        $integração = IntegracaoFuncionarioEmpresa::where('id_funcionarios','=',$funcionarios -> id) -> firstOrFail();
+
+        error_log($integração);
         $funcionarios->login = $request ->input('login');
         $funcionarios->nome = $request ->input('nome');
         $funcionarios->cpf = $request ->input('cpf');
@@ -98,9 +102,19 @@ class FuncionariosController extends Controller
         $funcionarios->senha = $request ->input('senha');
         $funcionarios->empresa = $request ->input('empresa');
 
-        if($funcionarios -> save()){
-            return new  FuncionariosResource($funcionarios);
-        }
+//
+//        if($funcionarios -> save()){
+//            $relaciotionship = new IntegracaoFuncionarioEmpresa;
+//            $relaciotionship -> id_empresas = $request ->input('empresa');
+//            $relaciotionship -> id_funcionarios = $funcionarios -> id;
+//            echo $relaciotionship;
+//            $relaciotionship -> save();
+//            return new  FuncionariosResource($funcionarios);
+//        }
+//
+//        if($funcionarios -> save()){
+//            return new  FuncionariosResource($funcionarios);
+//        }
 
     }
 

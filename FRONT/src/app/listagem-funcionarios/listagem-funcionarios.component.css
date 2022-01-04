@@ -15,18 +15,25 @@ table th{
   text-align: center;
 
 }
+
 .visu{
   background-color: var(--border-green) ;
   margin-left: 0.1rem;
   color: var(--text-title);
+
+
 }
 .edit{
   background-color: var(--border-green) ;
   margin-left: 0.2rem;
   color: var(--text-title);
+
+
 }
 .deletar{
   background-color: var(--danger);
   color: var(--text-title);
   margin-left: 0.2rem;
+
+
 }

@@ -14,8 +14,8 @@
       <td>{{ empresa.cnpj }}</td>
       <td>{{ empresa.endereco }}</td>
       <td class="table-info" >
-        <a href="#" [routerLink]="['/detail/', empresa.id]" class="btn visu">Visualizar Dados</a>
-        <a href="#" [routerLink]="['/editar/', empresa.id]" class="btn edit">Editar Dados</a>
+        <button type="button" [routerLink]="['/detail/', empresa.id]" class="btn visu">Visualizar Dados</button>
+        <button type="button" [routerLink]="['/editar/', empresa.id]" class="btn edit">Editar Dados</button>
         <button type="button" (click)="deleteEmpresa(empresa.id)" class="btn deletar">Deletar</button>
       </td>
     </tr>

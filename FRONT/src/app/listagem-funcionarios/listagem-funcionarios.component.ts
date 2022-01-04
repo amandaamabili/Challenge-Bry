@@ -9,9 +9,11 @@ import {FuncionariosService} from "../funcionarios.service";
 })
 export class ListagemFuncionariosComponent implements OnInit {
 funcionarios: Funcionarios[] = []
+
   constructor(public funcionarioService: FuncionariosService) { }
 
   ngOnInit(): void {
+
     console.log("init");
     this.funcionarioService.getAll().subscribe((response: any)=>{
       this.funcionarios = response.data;

@@ -48,11 +48,54 @@ button:hover{
   cursor: not-allowed;
 }
 
-html{
-@media (max-width: 1080px){
-  font-size: 93.75%;
+
+
+@media (max-width: 1080px) {
+  body {
+    font-size: 93.75%;
+
+  }
+  table{
+    width: 100%;
+  }
+  button{
+    width:75.75%;
+
+  }
+  nav{
+    width: 100%;
+
+  }
+
+  .container-dados{
+    font-size: 93.75%;
+    width: 100%;
+  }
 }
-@media (max-width: 720){
-  font-size: 87.5%;
+
+@media (max-width: 720px) {
+  body {
+
+    font-size: 87.5%;
+  }
+  nav{
+     width: 100%;
+
+  }
+  table{
+    width: 95.5%;
+  }
+button{
+  width:70.75%;
+
 }
+
+  .container-dados{
+    font-size: 87.5%;
+    width: 100%;
+  }
+
 }
+
+
+

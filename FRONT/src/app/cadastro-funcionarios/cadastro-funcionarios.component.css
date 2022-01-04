@@ -1,0 +1,27 @@
+.container{
+  padding: 2rem 2rem 2rem 2rem;
+}
+.nav{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+}
+h2{
+  padding: 0.5rem;
+  background-color: var(--block);
+  border-radius: 0.5rem;
+}
+
+button, a{
+  margin: 2rem 0rem;
+  text-align: center;
+
+}
+ng-valid[required], .ng-valid.required  {
+  border-left: 5px solid #42A948; /* green */
+}
+
+.ng-invalid:not(form)  {
+  border-left: 5px solid #a94442; /* red */
+}

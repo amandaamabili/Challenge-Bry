@@ -14,8 +14,8 @@
       <td>{{ funcionario.cpf }}</td>
       <td>{{ funcionario.email }}</td>
       <td class="table-info" >
-        <a href="#" [routerLink]="['/detalhefuncionario/', funcionario.id]" class="btn visu">Visualizar Dados</a>
-        <a href="#" [routerLink]="['/editarfuncionario/', funcionario.id]" class="btn edit">Editar Dados</a>
+        <button type="button" [routerLink]="['/detalhefuncionario/', funcionario.id]" class="btn visu">Visualizar Dados</button>
+        <button type="button" [routerLink]="['/editarfuncionario/', funcionario.id]" class="btn edit">Editar Dados</button>
         <button type="button" (click)="deleteFuncionario(funcionario.id)" class="btn deletar">Deletar</button>
       </td>
     </tr>

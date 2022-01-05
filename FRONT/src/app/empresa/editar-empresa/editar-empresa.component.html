@@ -1,0 +1,56 @@
+<div class="container">
+
+  <div class="nav">
+
+    <a href="#" routerLink="/listagemEmpresa" class="btn btn-success ">Voltar</a>
+    <h2>Editar dados da Empresa</h2>
+  </div>
+
+
+  <form [formGroup]="form" (ngSubmit)="submit()">
+
+    <div class="form-group">
+      <label for="nome">Nome:</label>
+      <input
+        formControlName="nome"
+        id="nome"
+        type="text"
+        pattern="[a-zA-Z0-9]+"
+        [(ngModel)]="empresa.nome"
+        class="form-control">
+      <div *ngIf="f['nome'].touched && f['nome'].invalid" class="alert alert-danger">
+        <div *ngIf="f['nome'].errors && f['nome'].errors['required']">Nome é obrigatório e sem caracteres especiais!
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="cnpj">CNPJ</label>
+      <textarea
+        formControlName="cnpj"
+        id="cnpj"
+        type="text"
+        [(ngModel)]="empresa.cnpj"
+        class="form-control">
+            </textarea>
+      <div *ngIf="f['cnpj'].touched && f['cnpj'].invalid" class="alert alert-danger">
+        <div *ngIf="f['cnpj'].errors && f['cnpj'].errors['required']">Cnpj é obrigatório!</div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="endereco">Endereço</label>
+      <textarea
+        formControlName="endereco"
+        id="endereco"
+        type="text"
+        [(ngModel)]="empresa.endereco"
+        class="form-control">
+            </textarea>
+      <div *ngIf="f['endereco'].touched && f['endereco'].invalid" class="alert alert-danger">
+        <div *ngIf="f['endereco'].errors && f['endereco'].errors['required']">Endereço é obrigatório!.</div>
+      </div>
+    </div>
+    <button class="btn btn-success" type="submit" [disabled]="!form.valid">Atualizar</button>
+  </form>
+</div>

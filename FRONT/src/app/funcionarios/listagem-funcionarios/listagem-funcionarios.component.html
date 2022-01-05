@@ -1,0 +1,24 @@
+<div class="container">
+
+  <a href="#" routerLink="/cadastroFuncionarios" class="btn btn-success">Cadastrar novo funcionário</a>
+
+  <table class="table ">
+    <tr>
+      <th scope="col">Nome</th>
+      <th scope="col">Cpf</th>
+      <th scope="col">E-mail</th>
+      <th scope="col">Ações</th>
+    </tr>
+    <tr scope="row" *ngFor="let funcionario of funcionarios">
+      <td>{{ funcionario.nome }}</td>
+      <td>{{ funcionario.cpf }}</td>
+      <td>{{ funcionario.email }}</td>
+      <td class="table-info" >
+        <button type="button" [routerLink]="['/detalhefuncionario/', funcionario.id]" class="btn visu">Visualizar Dados</button>
+        <button type="button" [routerLink]="['/editarfuncionario/', funcionario.id]" class="btn edit">Editar Dados</button>
+        <button type="button" (click)="deleteFuncionario(funcionario.id)" class="btn deletar">Deletar</button>
+      </td>
+    </tr>
+  </table>
+</div>
+

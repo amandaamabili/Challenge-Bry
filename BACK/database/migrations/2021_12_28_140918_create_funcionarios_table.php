@@ -20,7 +20,7 @@ class CreateFuncionariosTable extends Migration
 
             $table->string('login');
             $table->string('nome');
-            $table->integer('cpf');
+            $table->string('cpf');
             $table->string('email');
             $table->string('endereco');
             $table->string('senha');

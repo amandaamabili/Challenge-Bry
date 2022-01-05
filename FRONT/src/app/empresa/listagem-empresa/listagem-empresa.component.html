@@ -1,0 +1,23 @@
+<div class="container">
+
+  <a href="#" routerLink="/cadastroEmpresa" class="btn btn-success">Cadastrar nova empresa</a>
+
+  <table class="table ">
+    <tr>
+      <th scope="col">Empresa</th>
+      <th scope="col">CNPJ</th>
+      <th scope="col">Endereço</th>
+      <th scope="col">Ações</th>
+    </tr>
+    <tr scope="row" *ngFor="let empresa of empresas">
+      <td>{{ empresa.nome }}</td>
+      <td>{{ empresa.cnpj }}</td>
+      <td>{{ empresa.endereco }}</td>
+      <td class="table-info" >
+        <button type="button" [routerLink]="['/detail/', empresa.id]" class="btn visu">Visualizar Dados</button>
+        <button type="button" [routerLink]="['/editar/', empresa.id]" class="btn edit">Editar Dados</button>
+        <button type="button" (click)="deleteEmpresa(empresa.id)" class="btn deletar">Deletar</button>
+      </td>
+    </tr>
+  </table>
+</div>

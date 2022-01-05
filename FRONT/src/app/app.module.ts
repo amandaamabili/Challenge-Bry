@@ -4,34 +4,40 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { NavComponent } from './nav/nav.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { CadastroEmpresaComponent } from './cadastro-empresa/cadastro-empresa.component';
 import { AppRoutingModule } from './app-routing.module';
-import { CadastroFuncionariosComponent } from './cadastro-funcionarios/cadastro-funcionarios.component';
-import { ListagemEmpresaComponent } from './listagem-empresa/listagem-empresa.component';
-import { ListagemFuncionariosComponent } from './listagem-funcionarios/listagem-funcionarios.component';
-import { EmpresaDetalheComponent } from './empresa-detalhe/empresa-detalhe.component';
-import {FormsModule} from "@angular/forms";
+
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import { HttpClientModule } from '@angular/common/http';
+import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 
 
+
+import {EmpresaModule} from '../app/empresa/empresa.module';
+import {FuncionariosModule} from "./funcionarios/funcionarios.module";
 
 @NgModule({
   declarations: [
     AppComponent,
     NavComponent,
-    CadastroEmpresaComponent,
-    CadastroFuncionariosComponent,
-    ListagemEmpresaComponent,
-    ListagemFuncionariosComponent,
-    EmpresaDetalheComponent,
+
+
+
 
 
   ],
-    imports: [
-        BrowserModule,
-        NgbModule,
-        AppRoutingModule,
-        FormsModule
-    ],
+  imports: [
+    BrowserModule,
+    NgbModule,
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule,
+    EmpresaModule,
+    FuncionariosModule,
+    /*HttpClientInMemoryWebApiModule.forRoot(
+      InMemoryDataService, {dataEncapsulation: false}
+    ),*/
+    ReactiveFormsModule
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })

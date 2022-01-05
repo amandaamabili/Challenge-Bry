@@ -1,0 +1,37 @@
+<link rel="stylesheet" href="empresa-detalhe.component.css">
+<div class="container">
+
+
+  <a href="#" routerLink="/listagemEmpresa" class="btn btn-success">Voltar</a>
+
+
+
+  <div class="container-dados">
+    <div>
+
+
+      <h4>Dados da Empresa</h4>
+    </div>
+<div >
+  <div class="dados">
+    <p class="text">Id: </p>
+    <p>{{ empresa.id }}</p>
+  </div>
+
+  <div class="dados">
+    <p class="text" >Empresa: </p>
+    <p> {{ empresa.nome }}</p>
+  </div>
+
+  <div class="dados">
+    <p class="text">CNPJ: </p>
+    <p> {{ empresa.cnpj }}</p>
+  </div>
+
+  <div class="dados">
+    <p class="text">Endereço: </p>
+    <p> {{ empresa.endereco }}</p>
+  </div>
+</div>
+  </div>
+</div>

@@ -15,7 +15,7 @@
         formControlName="nome"
         id="nome"
         type="text"
-        pattern="[a-zA-Z0-9]+"
+
         [(ngModel)]="empresa.nome"
         class="form-control">
       <div *ngIf="f['nome'].touched && f['nome'].invalid" class="alert alert-danger">

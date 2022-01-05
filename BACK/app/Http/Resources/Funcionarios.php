@@ -21,7 +21,6 @@ class Funcionarios extends JsonResource
             'cpf' => $this->cpf,
             'email' => $this->email,
             'endereco' => $this->endereco,
-            'senha' => $this->senha
 
         ];
     }

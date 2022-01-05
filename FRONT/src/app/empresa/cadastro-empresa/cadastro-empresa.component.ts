@@ -16,7 +16,7 @@ export class CadastroEmpresaComponent implements OnInit {
 constructor(public empresaService: EmpresaService, private router: Router) { }
   ngOnInit(): void {
     this.form = new FormGroup({
-      nome: new FormControl('', [Validators.required, Validators.pattern('^[a-zA-Z]+')]),
+      nome: new FormControl('', [Validators.required]),
       cnpj: new FormControl('', Validators.required),
       endereco: new FormControl('', Validators.required),
 

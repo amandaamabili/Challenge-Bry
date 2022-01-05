@@ -20,9 +20,9 @@ export class CadastroFuncionariosComponent implements OnInit {
       this.empresas = response.data;
     })
     this.form = new FormGroup({
-      login: new FormControl('', Validators.required),
+      login: new FormControl('', [Validators.required, Validators.pattern('^[a-zA-Z]+')]),
       senha: new FormControl('', Validators.required),
-      nome: new FormControl('', [Validators.required, Validators.pattern('^[a-zA-Z]+')]),
+      nome: new FormControl('', Validators.required),
       cpf: new FormControl('', Validators.required),
       email: new FormControl('', Validators.required),
       endereco: new FormControl('', Validators.required),

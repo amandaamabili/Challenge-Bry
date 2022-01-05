@@ -80,8 +80,8 @@
       </div>
     </div>
     <div class="form-group">
-      <label for="empresa">Empresa</label>
-      <select class="form-select form-select-lg mb-3" aria-label="Default select example">
+      <label >Empresa</label>
+      <select class="form-select form-select-lg mb-3" aria-label="Default select example" formControlName="empresa">
         <option value="dados" *ngFor="let empresa of empresas" [ngValue]="empresa.id" >{{empresa.nome}}</option>
       </select>
 

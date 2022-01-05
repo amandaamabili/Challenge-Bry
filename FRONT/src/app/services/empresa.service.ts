@@ -1,6 +1,6 @@
 import {Injectable} from '@angular/core';
 import {Observable, of} from 'rxjs';
-import {Empresa} from './empresa';
+import {Empresa} from '../empresa/empresa';
 
 
 import {HttpClient, HttpHeaders} from '@angular/common/http';
@@ -45,7 +45,7 @@ export class EmpresaService {
   }
 
   delete(id:  number): Observable<Empresa> {
-    return this.http.delete<Empresa>(this.empresaUrl + id, this.httpOptions).pipe(
+    return this.http.delete<Empresa>(`${this.empresaUrl}/${id}`, this.httpOptions).pipe(
       catchError(this.handleError<Empresa>())
     );
   }

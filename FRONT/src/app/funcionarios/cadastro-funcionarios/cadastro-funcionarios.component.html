@@ -20,6 +20,19 @@
       </div>
     </div>
   </div>
+
+  <div class="form-group">
+    <label for="senha">Senha:</label>
+    <input
+      formControlName="senha"
+      id="senha"
+      type="password"
+      class="form-control">
+    <div *ngIf="f['senha'].touched && f['senha'].invalid" class="alert alert-danger">
+      <div *ngIf="f['senha'].errors && f['senha'].errors['required']">Senha é obrigatória !
+      </div>
+    </div>
+  </div>
   <div class="form-group">
     <label for="nome">Nome:</label>
     <input
@@ -78,10 +91,9 @@
   </div>
 
   <div class="form-group">
-    <label for="empresa">Empresa</label>
-    <select lass="form-select form-select-lg mb-3" aria-label="Default select example">
-      <option selected>Abra e selecione a empresa</option>
-      <option value="dados" *ngFor= "let empresa of empresas">{{empresa.nome}}</option>
+    <label>Empresa</label>
+    <select class="form-select form-select-lg mb-3" aria-label="Default select example" formControlName="empresa">
+      <option value="dados" *ngFor= "let empresa of empresas" [ngValue]="empresa.id">{{empresa.nome}}</option>
     </select>
 
     <div *ngIf="f['endereco'].touched && f['endereco'].invalid" class="alert alert-danger">

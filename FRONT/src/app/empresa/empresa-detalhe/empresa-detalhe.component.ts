@@ -2,7 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute, Router} from '@angular/router';
 import {Location} from '@angular/common';
 import {Empresa} from '../empresa'
-import {EmpresaService} from '../empresa.service'
+import {EmpresaService} from '../../services/empresa.service'
 
 @Component({
   selector: 'app-empresa-detalhe',

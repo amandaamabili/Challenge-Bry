@@ -1,0 +1,42 @@
+<link rel="stylesheet" href="detalhe-funcionarios.component.css">
+<div class="container">
+
+
+  <a href="#" routerLink="/listagemFuncionarios" class="btn btn-success">Voltar</a>
+
+
+
+  <div class="container-dados">
+    <div>
+
+
+      <h2>Dados do Funcionário</h2>
+    </div>
+    <div >
+      <div class="dados">
+        <p class="text">Id: </p>
+        <p>{{ funcionario.id }}</p>
+      </div>
+      <div class="dados">
+        <p class="text" >Nome: </p>
+        <p> {{ funcionario.nome }}</p>
+      </div>
+
+      <div class="dados">
+        <p class="text">CPF: </p>
+        <p> {{ funcionario.cpf }}</p>
+      </div>
+      <div class="dados">
+        <p class="text">E-mail </p>
+        <p> {{ funcionario.email }}</p>
+      </div>
+
+      <div class="dados">
+        <p class="text">Endereço: </p>
+        <p> {{ funcionario.endereco }}</p>
+      </div>
+
+    </div>
+  </div>
+</div>
+

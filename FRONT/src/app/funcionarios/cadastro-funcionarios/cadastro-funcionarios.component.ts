@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import {Router} from "@angular/router";
 import {FormControl, FormGroup, Validators} from "@angular/forms";
-import {FuncionariosService} from "../funcionarios.service";
-import {EmpresaService} from "../empresa.service";
-import {Empresa} from "../empresa";
+import {FuncionariosService} from "../../services/funcionarios.service";
+import {EmpresaService} from "../../services/empresa.service";
+import {Empresa} from "../../empresa/empresa";
 
 @Component({
   selector: 'app-cadastro-funcionarios',
@@ -18,30 +18,27 @@ export class CadastroFuncionariosComponent implements OnInit {
   ngOnInit(): void {
     this.empresaService.getAll().subscribe((response: any)=>{
       this.empresas = response.data;
-      console.log(this.empresas);
     })
     this.form = new FormGroup({
       login: new FormControl('', Validators.required),
+      senha: new FormControl('', Validators.required),
       nome: new FormControl('', [Validators.required, Validators.pattern('^[a-zA-Z]+')]),
       cpf: new FormControl('', Validators.required),
       email: new FormControl('', Validators.required),
       endereco: new FormControl('', Validators.required),
-      senha: new FormControl('', Validators.required),
-      empresa: new FormControl('', Validators.required),
-
-    });
+      empresa: new FormControl(this.empresas[0])
+    })
   }
   get f(){
     return this.form.controls;
   }
 
-
   submit(){
-    console.log(this.form.value);
     this.funcionarioservice.create(this.form.value).subscribe((res:any) => {
       console.log('Post created successfully!');
       this.router.navigateByUrl('/listagemFuncionarios');
 
     })
   }
+
 }

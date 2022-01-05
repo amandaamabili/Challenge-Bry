@@ -1,0 +1,94 @@
+<div class="container">
+
+  <div class="nav">
+
+    <a href="#" routerLink="/listagemFuncionarios" class="btn btn-success ">Voltar</a>
+    <h2>Editar dados do Funcionário</h2>
+  </div>
+
+
+  <form [formGroup]="form" (ngSubmit)="submit()">
+    <div class="form-group">
+      <label for="login">Login:</label>
+      <input
+        formControlName="login"
+        id="login"
+        type="text"
+        pattern="[a-zA-Z0-9]+"
+        [(ngModel)]="funcionario.login"
+        class="form-control">
+      <div *ngIf="f['login'].touched && f['login'].invalid" class="alert alert-danger">
+        <div *ngIf="f['login'].errors && f['login'].errors['required']">Nome é obrigatório e sem caracteres especiais!
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="nome">Nome:</label>
+      <input
+        formControlName="nome"
+        id="nome"
+        type="text"
+        pattern="[a-zA-Z0-9]+"
+        [(ngModel)]="funcionario.nome"
+        class="form-control">
+      <div *ngIf="f['nome'].touched && f['nome'].invalid" class="alert alert-danger">
+        <div *ngIf="f['nome'].errors && f['nome'].errors['required']">Nome é obrigatório e sem caracteres especiais!
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="cpf">CPF</label>
+      <textarea
+        formControlName="cpf"
+        id="cpf"
+        type="text"
+        [(ngModel)]="funcionario.cpf"
+        class="form-control">
+            </textarea>
+      <div *ngIf="f['cpf'].touched && f['cpf'].invalid" class="alert alert-danger">
+        <div *ngIf="f['cpf'].errors && f['cpf'].errors['required']">cpf é obrigatório!</div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="email">E-mail</label>
+      <textarea
+        formControlName="email"
+        id="email"
+        type="text"
+        [(ngModel)]="funcionario.email"
+        class="form-control">
+            </textarea>
+      <div *ngIf="f['email'].touched && f['email'].invalid" class="alert alert-danger">
+        <div *ngIf="f['email'].errors && f['email'].errors['required']">email é obrigatório!</div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="endereco">Endereço</label>
+      <textarea
+        formControlName="endereco"
+        id="endereco"
+        type="text"
+        [(ngModel)]="funcionario.endereco"
+        class="form-control">
+            </textarea>
+      <div *ngIf="f['endereco'].touched && f['endereco'].invalid" class="alert alert-danger">
+        <div *ngIf="f['endereco'].errors && f['endereco'].errors['required']">Endereço é obrigatório!.</div>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="empresa">Empresa</label>
+      <select class="form-select form-select-lg mb-3" aria-label="Default select example">
+        <option value="dados" *ngFor="let empresa of empresas" [ngValue]="empresa.id" >{{empresa.nome}}</option>
+      </select>
+
+    </div>
+
+    <button class="btn btn-success" type="submit">Atualizar</button>
+  </form>
+</div>
+
+<!--[disabled]="!form.valid"-->

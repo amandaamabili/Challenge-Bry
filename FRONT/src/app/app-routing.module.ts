@@ -1,14 +1,14 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import  {CadastroEmpresaComponent} from "./cadastro-empresa/cadastro-empresa.component"
-import {CadastroFuncionariosComponent} from "./cadastro-funcionarios/cadastro-funcionarios.component";
-import {ListagemEmpresaComponent} from  "./listagem-empresa/listagem-empresa.component"
-import {ListagemFuncionariosComponent} from "./listagem-funcionarios/listagem-funcionarios.component"
-import {EmpresaDetalheComponent} from "./empresa-detalhe/empresa-detalhe.component"
+import  {CadastroEmpresaComponent} from "./empresa/cadastro-empresa/cadastro-empresa.component"
+import {CadastroFuncionariosComponent} from "./funcionarios/cadastro-funcionarios/cadastro-funcionarios.component";
+import {ListagemEmpresaComponent} from "./empresa/listagem-empresa/listagem-empresa.component"
+import {ListagemFuncionariosComponent} from "./funcionarios/listagem-funcionarios/listagem-funcionarios.component"
+import {EmpresaDetalheComponent} from "./empresa/empresa-detalhe/empresa-detalhe.component"
 import {RouterModule, Routes} from "@angular/router";
-import {EditarEmpresaComponent} from "./editar-empresa/editar-empresa.component";
-import {EditarFuncionariosComponent} from "./editar-funcionarios/editar-funcionarios.component"
-import {DetalheFuncionariosComponent} from "./detalhe-funcionarios/detalhe-funcionarios.component"
+import {EditarEmpresaComponent} from "./empresa/editar-empresa/editar-empresa.component";
+import {EditarFuncionariosComponent} from "./funcionarios/editar-funcionarios/editar-funcionarios.component"
+import {DetalheFuncionariosComponent} from "./funcionarios/detalhe-funcionarios/detalhe-funcionarios.component"
 
  const  appRoutes: Routes = [
   // {path:'', redirectTo: '/cadastroEmpresas', pathMatch: 'full'},

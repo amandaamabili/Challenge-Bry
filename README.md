@@ -57,12 +57,13 @@ pode possuir um ou mais funcionários.
   
 * PostgreSQL
   ```sh
- sudo apt-get -y install postgresql
+  sudo apt-get -y install postgresql
   ```
   
 ### FRONT  
   
 * Angular CLI
+
   ```sh
   npm install -g @angular/cli
   ```

@@ -1,7 +1,10 @@
 # Challenge-Bry
 
 
-![Test Image 4](https://res.cloudinary.com/practicaldev/image/fetch/s--7ZktNpFg--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/jwj38ggnwcjb1bh91tpp.png)
+<a href="https://ibb.co/fMFJ51H"><img src="https://i.ibb.co/rk09S7H/Screenshot-from-2022-01-04-22-54-26.png" alt="Screenshot-from-2022-01-04-22-54-26" border="0"></a>
+<a href="https://ibb.co/wy0cPRF"><img src="https://i.ibb.co/WnxVM64/Screenshot-from-2022-01-04-22-51-48.png" alt="Screenshot-from-2022-01-04-22-51-48" border="0"></a>
+
+
 
 
 ## Sobre o Projeto

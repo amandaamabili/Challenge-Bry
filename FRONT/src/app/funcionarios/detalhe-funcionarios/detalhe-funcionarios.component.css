@@ -1,6 +1,6 @@
 .container{
   padding: 2rem 2rem 2rem 2rem;
-  width: 70%;
+
 
 
 }
@@ -33,9 +33,9 @@ p{
 
 }
 .text{
+  text-align: left;
+  width: 40%;
 
-  width: 20%;
-  
 
 
 }
